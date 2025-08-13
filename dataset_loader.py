@@ -27,17 +27,17 @@ weaviate_client = weaviate.connect_to_weaviate_cloud(
     auth_credentials=Auth.api_key(WEAVIATE_API_KEY),
 )
 
-@opik.track
 def setup_robotic_text_collection():
     """Setup a collection specifically for robotic text examples"""
     print("🔧 Setting up RoboticTextExamples collection...")
-    
+
     try:
         collections = weaviate_client.collections.list_all()
-        
+        print(f"📋 Available collections: {list(collections.keys())}")
+
         if "RoboticTextExamples" not in collections:
             print("📝 Creating RoboticTextExamples collection...")
-            
+
             weaviate_client.collections.create(
                 name="RoboticTextExamples",
                 properties=[
@@ -53,18 +53,21 @@ def setup_robotic_text_collection():
             print("✅ RoboticTextExamples collection created!")
         else:
             print("✅ RoboticTextExamples collection already exists!")
-            
-        return weaviate_client.collections.get("RoboticTextExamples")
-        
+
+        # Get and verify the collection
+        collection = weaviate_client.collections.get("RoboticTextExamples")
+        print(f"✅ Successfully got collection object")
+        return collection
+
     except Exception as e:
         print(f"❌ Error setting up collection: {e}")
-        return None
-
-@opik.track
+        import traceback
+        traceback.print_exc()
+        return None@opik.track
 def add_corporate_emails():
     """Add corporate email examples"""
     print("📧 Adding corporate email examples...")
-    
+
     corporate_emails = [
         {
             "text": "We regret to inform you that your application has been unsuccessful at this time. Please be advised that we will retain your information for future opportunities that may align with your qualifications.",
@@ -75,7 +78,7 @@ def add_corporate_emails():
         },
         {
             "text": "Please be advised that the meeting scheduled for tomorrow has been postponed until further notice. We will communicate the rescheduled date and time in due course.",
-            "source": "corporate_communications", 
+            "source": "corporate_communications",
             "category": "corporate_email",
             "formality_score": 8.5,
             "tags": ["meeting", "postponement", "formal"]
@@ -83,7 +86,7 @@ def add_corporate_emails():
         {
             "text": "We acknowledge receipt of your inquiry and wish to inform you that your request is currently under review by the appropriate department. A response will be provided within 5-7 business days.",
             "source": "customer_service",
-            "category": "corporate_email", 
+            "category": "corporate_email",
             "formality_score": 8.8,
             "tags": ["acknowledgment", "review", "timeline"]
         },
@@ -102,14 +105,14 @@ def add_corporate_emails():
             "tags": ["acceptance", "contract", "signature"]
         }
     ]
-    
+
     return corporate_emails
 
-@opik.track  
+@opik.track
 def add_technical_documentation():
     """Add technical documentation examples"""
     print("⚙️ Adding technical documentation examples...")
-    
+
     technical_docs = [
         {
             "text": "The implementation of the aforementioned solution requires comprehensive analysis of the existing infrastructure and subsequent optimization of the current workflow processes to ensure maximum efficiency.",
@@ -128,7 +131,7 @@ def add_technical_documentation():
         {
             "text": "The system administrator should execute the following command sequence to perform database optimization and subsequently verify the integrity of the data structures.",
             "source": "admin_manuals",
-            "category": "technical", 
+            "category": "technical",
             "formality_score": 8.9,
             "tags": ["database", "optimization", "verification"]
         },
@@ -140,14 +143,14 @@ def add_technical_documentation():
             "tags": ["troubleshooting", "failure", "procedures"]
         }
     ]
-    
+
     return technical_docs
 
 @opik.track
 def add_legal_documents():
     """Add legal document examples"""
     print("⚖️ Adding legal document examples...")
-    
+
     legal_docs = [
         {
             "text": "The party of the first part hereby agrees to indemnify and hold harmless the party of the second part from any and all claims, damages, or liabilities arising from or related to the performance of this agreement.",
@@ -171,14 +174,14 @@ def add_legal_documents():
             "tags": ["notice", "application", "regulatory"]
         }
     ]
-    
+
     return legal_docs
 
 @opik.track
 def add_academic_writing():
     """Add academic writing examples"""
     print("🎓 Adding academic writing examples...")
-    
+
     academic_texts = [
         {
             "text": "The findings of this investigation demonstrate a statistically significant correlation between the variables under examination, necessitating further research to establish causal relationships.",
@@ -202,14 +205,14 @@ def add_academic_writing():
             "tags": ["recommendations", "longitudinal", "variables"]
         }
     ]
-    
+
     return academic_texts
 
 @opik.track
 def add_medical_clinical():
     """Add medical/clinical examples"""
     print("🏥 Adding medical/clinical examples...")
-    
+
     medical_texts = [
         {
             "text": "The patient should be advised to adhere to the prescribed medication regimen and schedule follow-up appointments as per the established protocol to monitor therapeutic efficacy.",
@@ -221,7 +224,7 @@ def add_medical_clinical():
         {
             "text": "Upon examination, the patient presents with symptoms consistent with the differential diagnosis. Further diagnostic testing is recommended to confirm the provisional assessment.",
             "source": "medical_reports",
-            "category": "medical", 
+            "category": "medical",
             "formality_score": 9.0,
             "tags": ["examination", "diagnosis", "testing"]
         },
@@ -233,36 +236,36 @@ def add_medical_clinical():
             "tags": ["consent", "treatment", "communication"]
         }
     ]
-    
+
     return medical_texts
 
 @opik.track
 def populate_database_with_examples(collection):
     """Populate the database with all examples"""
     print("🚀 Populating database with robotic text examples...")
-    
+
     all_examples = []
     all_examples.extend(add_corporate_emails())
-    all_examples.extend(add_technical_documentation()) 
+    all_examples.extend(add_technical_documentation())
     all_examples.extend(add_legal_documents())
     all_examples.extend(add_academic_writing())
     all_examples.extend(add_medical_clinical())
-    
+
     # Add metadata to all examples
     for example in all_examples:
         example["length"] = len(example["text"])
         example["timestamp"] = datetime.now().isoformat()
-    
+
     print(f"📊 Adding {len(all_examples)} examples to database...")
-    
+
     try:
         with collection.batch.dynamic() as batch:
             for example in all_examples:
                 batch.add_object(properties=example)
-        
+
         print("✅ All examples added successfully!")
         return len(all_examples)
-        
+
     except Exception as e:
         print(f"❌ Error adding examples: {e}")
         return 0
@@ -271,14 +274,14 @@ def populate_database_with_examples(collection):
 def download_real_datasets():
     """Download real datasets from online sources"""
     print("🌐 Downloading real datasets...")
-    
+
     datasets = []
-    
+
     # Try to get some real corporate/formal text datasets
     try:
         # Example: Corporate press releases (you can add more sources)
         print("📰 Attempting to download corporate communications...")
-        
+
         # Add more sample corporate texts that sound robotic
         corporate_samples = [
             "We are pleased to announce that our organization has successfully completed the acquisition of the aforementioned entity, effective immediately.",
@@ -287,7 +290,7 @@ def download_real_datasets():
             "It has come to our attention that certain operational procedures require immediate modification to ensure compliance with regulatory requirements.",
             "We wish to inform all stakeholders that the quarterly review meeting will be conducted via teleconference on the date specified in the calendar invitation."
         ]
-        
+
         for i, text in enumerate(corporate_samples):
             datasets.append({
                 "text": text,
@@ -298,46 +301,46 @@ def download_real_datasets():
                 "tags": ["corporate", "formal", "business"],
                 "timestamp": datetime.now().isoformat()
             })
-            
+
         print(f"✅ Added {len(corporate_samples)} corporate communication samples")
-        
+
     except Exception as e:
         print(f"⚠️ Could not download external datasets: {e}")
-    
+
     return datasets
 
 @opik.track
 def analyze_database_contents(collection):
     """Analyze what's in the database"""
     print("\n📊 Analyzing database contents...")
-    
+
     try:
         # Get all examples
         results = collection.query.fetch_objects(limit=100)
-        
+
         # Analyze by category
         categories = {}
         formality_scores = []
-        
+
         for obj in results.objects:
             props = obj.properties
             category = props.get("category", "unknown")
             formality = props.get("formality_score", 0)
-            
+
             if category not in categories:
                 categories[category] = 0
             categories[category] += 1
             formality_scores.append(formality)
-        
+
         print(f"📈 Total examples: {len(results.objects)}")
         print(f"📋 Categories:")
         for cat, count in categories.items():
             print(f"  - {cat}: {count} examples")
-        
+
         if formality_scores:
             avg_formality = sum(formality_scores) / len(formality_scores)
             print(f"📊 Average formality score: {avg_formality:.1f}/10")
-        
+
         # Show some examples
         print(f"\n📝 Sample entries:")
         for i, obj in enumerate(results.objects[:3], 1):
@@ -345,7 +348,7 @@ def analyze_database_contents(collection):
             print(f"\n{i}. [{props['category']}] Formality: {props['formality_score']}/10")
             print(f"   Text: {props['text'][:100]}...")
             print(f"   Tags: {props.get('tags', [])}")
-            
+
     except Exception as e:
         print(f"❌ Error analyzing database: {e}")
 
@@ -354,25 +357,30 @@ def main():
     print("🤖📚 AI Humanizer Database Populator")
     print("=" * 50)
     print("Building a comprehensive dataset of robotic/formal text!")
-    
+
     # Setup collection
+    print("🔍 Calling setup_robotic_text_collection()...")
     collection = setup_robotic_text_collection()
-    if not collection:
+    print(f"🔍 Returned collection: {collection}")
+    print(f"🔍 Collection type: {type(collection)}")
+    print(f"🔍 Collection is None? {collection is None}")
+
+    if collection is None:
         print("❌ Failed to setup collection. Exiting.")
         return
-    
+
     print("\nChoose what to add:")
     print("1. Add curated examples (emails, legal, tech, etc.)")
     print("2. Download external datasets")
     print("3. Add everything")
     print("4. Just analyze current database")
-    
+
     choice = input("\nEnter choice (1-4): ").strip()
-    
+
     if choice in ["1", "3"]:
         count = populate_database_with_examples(collection)
         print(f"✅ Added {count} curated examples!")
-    
+
     if choice in ["2", "3"]:
         datasets = download_real_datasets()
         if datasets:
@@ -383,13 +391,13 @@ def main():
                 print(f"✅ Added {len(datasets)} external dataset examples!")
             except Exception as e:
                 print(f"❌ Error adding external data: {e}")
-    
+
     # Always analyze at the end
     analyze_database_contents(collection)
-    
+
     print(f"\n🎯 Database is ready! Your AI Humanizer now has tons of examples to learn from.")
     print(f"💡 Run your ai_humanizer.py script to start humanizing text with this rich dataset!")
-    
+
     # Cleanup
     weaviate_client.close()
     print(f"✅ Connection closed.")

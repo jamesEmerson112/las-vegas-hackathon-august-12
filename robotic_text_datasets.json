@@ -1,0 +1,392 @@
+[
+  {
+    "text": "The Company hereby certifies that it has reasonable grounds to believe that it meets all of the requirements for filing this form and has duly caused this report to be signed on its behalf by the undersigned thereunto duly authorized.",
+    "source": "sec_filings",
+    "category": "legal_financial",
+    "formality_score": 10.0,
+    "length": 234,
+    "timestamp": "2025-08-12T20:17:06.798815",
+    "tags": [
+      "legal_financial",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Pursuant to the requirements of the Securities Exchange Act of 1934, the registrant has duly caused this report to be signed on its behalf by the undersigned, thereunto duly authorized.",
+    "source": "sec_filings",
+    "category": "legal_financial",
+    "formality_score": 10.0,
+    "length": 185,
+    "timestamp": "2025-08-12T20:17:06.798824",
+    "tags": [
+      "legal_financial",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The registrant hereby undertakes to provide to the Commission staff upon request copies of any documents incorporated by reference in the registration statement.",
+    "source": "sec_filings",
+    "category": "legal_financial",
+    "formality_score": 10.0,
+    "length": 161,
+    "timestamp": "2025-08-12T20:17:06.798825",
+    "tags": [
+      "legal_financial",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "No director, executive officer, promoter or control person of the registrant has been subject to any order, judgment, or decree of any court of competent jurisdiction.",
+    "source": "sec_filings",
+    "category": "legal_financial",
+    "formality_score": 10.0,
+    "length": 167,
+    "timestamp": "2025-08-12T20:17:06.798827",
+    "tags": [
+      "legal_financial",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The undersigned registrant hereby undertakes that, for purposes of determining any liability under the Securities Act of 1933, each filing of the registrant's annual report pursuant to section 13(a) or section 15(d) of the Securities Exchange Act of 1934 that is incorporated by reference in the registration statement shall be deemed to be a new registration statement relating to the securities offered therein.",
+    "source": "sec_filings",
+    "category": "legal_financial",
+    "formality_score": 10.0,
+    "length": 413,
+    "timestamp": "2025-08-12T20:17:06.798828",
+    "tags": [
+      "legal_financial",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "This study investigates the relationship between organizational culture and employee performance in the context of digital transformation initiatives within large multinational corporations.",
+    "source": "academic_papers",
+    "category": "academic",
+    "formality_score": 9.0,
+    "length": 190,
+    "timestamp": "2025-08-12T20:17:06.798829",
+    "tags": [
+      "academic",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The present research employs a mixed-methods approach to examine the efficacy of machine learning algorithms in predicting consumer behavior patterns across diverse demographic segments.",
+    "source": "academic_papers",
+    "category": "academic",
+    "formality_score": 9.0,
+    "length": 186,
+    "timestamp": "2025-08-12T20:17:06.798830",
+    "tags": [
+      "academic",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "This investigation utilizes a longitudinal design to assess the impact of remote work policies on organizational productivity and employee satisfaction metrics over a 24-month period.",
+    "source": "academic_papers",
+    "category": "academic",
+    "formality_score": 9.0,
+    "length": 183,
+    "timestamp": "2025-08-12T20:17:06.798832",
+    "tags": [
+      "academic",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The findings suggest a statistically significant correlation between leadership styles and innovation outcomes, with implications for management theory and practice.",
+    "source": "academic_papers",
+    "category": "academic",
+    "formality_score": 9.0,
+    "length": 165,
+    "timestamp": "2025-08-12T20:17:06.798834",
+    "tags": [
+      "academic",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "This meta-analysis synthesizes results from 47 empirical studies to evaluate the effectiveness of various intervention strategies in reducing workplace stress and burnout.",
+    "source": "academic_papers",
+    "category": "academic",
+    "formality_score": 9.0,
+    "length": 171,
+    "timestamp": "2025-08-12T20:17:06.798835",
+    "tags": [
+      "academic",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "All personnel are hereby directed to comply with the updated security protocols as outlined in Policy Document 2024-001, effective immediately upon distribution of this memorandum.",
+    "source": "policy_documents",
+    "category": "government",
+    "formality_score": 9.5,
+    "length": 180,
+    "timestamp": "2025-08-12T20:17:06.798836",
+    "tags": [
+      "government",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The Department reserves the right to modify, suspend, or terminate any program or service without prior notice in accordance with applicable regulations and budgetary constraints.",
+    "source": "policy_documents",
+    "category": "government",
+    "formality_score": 9.5,
+    "length": 179,
+    "timestamp": "2025-08-12T20:17:06.798837",
+    "tags": [
+      "government",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Applicants must submit all required documentation no later than 30 days prior to the deadline specified in the official announcement to ensure adequate processing time.",
+    "source": "policy_documents",
+    "category": "government",
+    "formality_score": 9.5,
+    "length": 168,
+    "timestamp": "2025-08-12T20:17:06.798838",
+    "tags": [
+      "government",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The implementation of these guidelines shall be conducted in phases, with full compliance expected within 90 days of the effective date specified herein.",
+    "source": "policy_documents",
+    "category": "government",
+    "formality_score": 9.5,
+    "length": 153,
+    "timestamp": "2025-08-12T20:17:06.798839",
+    "tags": [
+      "government",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Any deviation from established procedures must be approved in writing by the appropriate supervisory authority prior to implementation.",
+    "source": "policy_documents",
+    "category": "government",
+    "formality_score": 9.5,
+    "length": 135,
+    "timestamp": "2025-08-12T20:17:06.798840",
+    "tags": [
+      "government",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Patients presenting with acute symptoms should be evaluated immediately using the standardized triage protocol to determine the appropriate level of care and treatment modality.",
+    "source": "medical_literature",
+    "category": "medical",
+    "formality_score": 8.8,
+    "length": 177,
+    "timestamp": "2025-08-12T20:17:06.798841",
+    "tags": [
+      "medical",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The administration of medication should be conducted in accordance with established dosing guidelines, with careful monitoring for potential adverse reactions and drug interactions.",
+    "source": "medical_literature",
+    "category": "medical",
+    "formality_score": 8.8,
+    "length": 181,
+    "timestamp": "2025-08-12T20:17:06.798841",
+    "tags": [
+      "medical",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Healthcare providers are advised to obtain comprehensive medical histories and perform thorough physical examinations prior to establishing differential diagnoses.",
+    "source": "medical_literature",
+    "category": "medical",
+    "formality_score": 8.8,
+    "length": 163,
+    "timestamp": "2025-08-12T20:17:06.798842",
+    "tags": [
+      "medical",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The treatment protocol requires strict adherence to infection control measures and proper documentation of all interventions and patient responses.",
+    "source": "medical_literature",
+    "category": "medical",
+    "formality_score": 8.8,
+    "length": 147,
+    "timestamp": "2025-08-12T20:17:06.798843",
+    "tags": [
+      "medical",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Clinical outcomes should be monitored continuously using validated assessment tools to ensure optimal therapeutic efficacy and patient safety.",
+    "source": "medical_literature",
+    "category": "medical",
+    "formality_score": 8.8,
+    "length": 142,
+    "timestamp": "2025-08-12T20:17:06.798844",
+    "tags": [
+      "medical",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "We are pleased to announce that the Board of Directors has approved the strategic initiative outlined in the proposal submitted by the executive management team.",
+    "source": "corporate_communications",
+    "category": "corporate",
+    "formality_score": 8.5,
+    "length": 161,
+    "timestamp": "2025-08-12T20:17:06.798845",
+    "tags": [
+      "corporate",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Please be advised that the quarterly earnings call will be conducted on the date specified in the investor relations calendar, with dial-in instructions to follow.",
+    "source": "corporate_communications",
+    "category": "corporate",
+    "formality_score": 8.5,
+    "length": 163,
+    "timestamp": "2025-08-12T20:17:06.798846",
+    "tags": [
+      "corporate",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The company wishes to inform all stakeholders that the merger transaction is expected to close in the fourth quarter, subject to regulatory approval and other customary conditions.",
+    "source": "corporate_communications",
+    "category": "corporate",
+    "formality_score": 8.5,
+    "length": 180,
+    "timestamp": "2025-08-12T20:17:06.798847",
+    "tags": [
+      "corporate",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Management has determined that restructuring certain operational divisions will optimize efficiency and enhance shareholder value in the current market environment.",
+    "source": "corporate_communications",
+    "category": "corporate",
+    "formality_score": 8.5,
+    "length": 164,
+    "timestamp": "2025-08-12T20:17:06.798848",
+    "tags": [
+      "corporate",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "We regret to inform employees that due to economic factors beyond our control, certain cost reduction measures will be implemented effective at the end of the current fiscal quarter.",
+    "source": "corporate_communications",
+    "category": "corporate",
+    "formality_score": 8.5,
+    "length": 182,
+    "timestamp": "2025-08-12T20:17:06.798849",
+    "tags": [
+      "corporate",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The insured shall notify the company immediately upon discovery of any occurrence which may give rise to a claim under this policy, providing full particulars of such occurrence.",
+    "source": "insurance_policies",
+    "category": "legal_insurance",
+    "formality_score": 9.8,
+    "length": 178,
+    "timestamp": "2025-08-12T20:17:06.798849",
+    "tags": [
+      "legal_insurance",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "Coverage shall be void if the insured fails to comply with any condition precedent to the company's liability as set forth in the policy terms and conditions.",
+    "source": "insurance_policies",
+    "category": "legal_insurance",
+    "formality_score": 9.8,
+    "length": 158,
+    "timestamp": "2025-08-12T20:17:06.798850",
+    "tags": [
+      "legal_insurance",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The company reserves the right to investigate any claim and to defend any suit alleging liability covered hereunder, even if such suit is groundless, false, or fraudulent.",
+    "source": "insurance_policies",
+    "category": "legal_insurance",
+    "formality_score": 9.8,
+    "length": 171,
+    "timestamp": "2025-08-12T20:17:06.798851",
+    "tags": [
+      "legal_insurance",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "No action shall lie against the company unless, as a condition precedent thereto, the insured shall have fully complied with all terms of this policy.",
+    "source": "insurance_policies",
+    "category": "legal_insurance",
+    "formality_score": 9.8,
+    "length": 150,
+    "timestamp": "2025-08-12T20:17:06.798852",
+    "tags": [
+      "legal_insurance",
+      "formal",
+      "robotic"
+    ]
+  },
+  {
+    "text": "The limit of liability stated in the declarations shall be reduced by any payment made by the company under this policy for damages arising out of the same occurrence.",
+    "source": "insurance_policies",
+    "category": "legal_insurance",
+    "formality_score": 9.8,
+    "length": 167,
+    "timestamp": "2025-08-12T20:17:06.798853",
+    "tags": [
+      "legal_insurance",
+      "formal",
+      "robotic"
+    ]
+  }
+]
