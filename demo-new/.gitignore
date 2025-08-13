@@ -15,7 +15,39 @@ pids
 
 # Coverage directory used by tools like istanbul
 coverage
+coverage/
 *.lcov
+
+# Dependencies
+node_modules
+node_modules/
+jspm_packages/
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build outputs
+build/
+out/
+dist/
 
 # nyc test coverage
 .nyc_output
@@ -31,10 +63,6 @@ bower_components
 
 # Compiled binary addons (https://nodejs.org/api/addons.html)
 build/Release
-
-# Dependency directories
-node_modules/
-jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
@@ -66,13 +94,6 @@ web_modules/
 # Yarn Integrity file
 .yarn-integrity
 
-# dotenv environment variable files
-.env
-.env.development.local
-.env.test.local
-.env.production.local
-.env.local
-
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 .parcel-cache
@@ -82,23 +103,12 @@ web_modules/
 
 # Nuxt.js build / generate output
 .nuxt
-dist
 
 # Gatsby files
 .cache/
 # Comment in the public line in if your project uses Gatsby and not Next.js
 # https://nextjs.org/blog/next-9-1#public-directory-support
 # public
-
-# Vite build output
-dist/
-dist-ssr
-
-# Rollup build output
-build/
-
-# Webpack build output
-build/
 
 # Storybook build outputs
 .out
@@ -109,7 +119,6 @@ build/
 
 # vuepress v2.x temp and cache directory
 .temp
-.cache
 
 # Docusaurus cache and generated files
 .docusaurus
@@ -146,9 +155,7 @@ __pycache__/
 
 # Distribution / packaging
 .Python
-build/
 develop-eggs/
-dist/
 downloads/
 eggs/
 .eggs/
@@ -181,7 +188,6 @@ htmlcov/
 .nox/
 .coverage
 .coverage.*
-.cache
 nosetests.xml
 coverage.xml
 *.cover
@@ -194,7 +200,6 @@ coverage.xml
 *.pot
 
 # Django stuff:
-*.log
 local_settings.py
 db.sqlite3
 db.sqlite3-journal
@@ -240,7 +245,6 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
 .venv
 env/
 venv/
@@ -267,7 +271,6 @@ dmypy.json
 .pyre/
 
 # macOS
-.DS_Store
 .AppleDouble
 .LSOverride
 
@@ -339,7 +342,6 @@ $RECYCLE.BIN/
 .idea/
 *.swp
 *.swo
-*~
 
 # Temporary folders
 tmp/

@@ -7,7 +7,7 @@ import { ChessBoard } from './chess/ChessComponents';
 import { TicTacToeGame } from './tictactoe/TicTacToeComponents';
 import { TicTacToeLogic, GameState as TicTacToeGameState, GameStats as TicTacToeGameStats } from './tictactoe/TicTacToeLogic';
 
-const API_BASE = 'http://localhost:3001/api';
+const API_BASE = 'http://localhost:3002/api';
 
 const App: React.FC = () => {
   // Navigation state
